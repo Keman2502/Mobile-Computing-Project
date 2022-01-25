@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="610dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="71dp"
+        android:text="@string/student_facilitation_system"
+        android:textAlignment="center"
+        android:textColor="@color/teal_700"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="358dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="547dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="134dp"
+        android:text="Announcements"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="105dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginStart="139dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="OK!" />
+
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="353dp"
+        android:layout_height="94dp"
+        android:layout_above="@+id/ok"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="262dp"
+        android:layout_marginEnd="30dp" />
+
+    <TextView
+        android:id="@+id/t2"
+        android:layout_width="353dp"
+        android:layout_height="94dp"
+        android:layout_above="@+id/ok"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="134dp"
+        android:layout_marginEnd="35dp" />
+
+
+</RelativeLayout>
