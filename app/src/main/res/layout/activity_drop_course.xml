@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="71dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="585dp"
+        android:text="@string/student_facilitation_system"
+        android:textColor="@color/teal_700"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/coursename"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="135dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="493dp" />
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="288dp"
+        android:layout_marginBottom="495dp"
+        android:text="Course "
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="112dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="263dp"
+        android:layout_marginEnd="284dp"
+        android:layout_marginBottom="431dp"
+        android:text="Roll No."
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+
+    <EditText
+        android:id="@+id/rollid"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="141dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="429dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="112dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="327dp"
+        android:layout_marginEnd="282dp"
+        android:layout_marginBottom="367dp"
+        android:text="Teacher"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+
+    <EditText
+        android:id="@+id/tchr"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="137dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="361dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="112dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="396dp"
+        android:layout_marginEnd="288dp"
+        android:layout_marginBottom="298dp"
+        android:text="Department"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/dpt"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="136dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="295dp" />
+
+    <Button
+        android:id="@+id/drop"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="142dp"
+        android:layout_marginEnd="141dp"
+        android:layout_marginBottom="211dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="DROP!" />
+
+
+</RelativeLayout>
