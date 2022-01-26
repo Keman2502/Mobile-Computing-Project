@@ -39,7 +39,7 @@ public class login extends AppCompatActivity {
 
 
             public void onClick(View v) {
-                if (uname.getText().toString().isEmpty()) {
+                if (uname.getText().toString().matches("")) {
                     uname.setError("Field is required");
                     isEmailValid = false;
                 } else if (!Patterns.EMAIL_ADDRESS.matcher(uname.getText().toString()).matches()) {
@@ -50,7 +50,7 @@ public class login extends AppCompatActivity {
                 }
 
                 // Check for a valid password.
-                if (pass.getText().toString().isEmpty()) {
+                if (pass.getText().toString().matches("")) {
                     pass.setError("Field is required");
                     isPasswordValid = false;
                 } else if (pass.getText().length() < 6) {
@@ -63,8 +63,8 @@ public class login extends AppCompatActivity {
 
                 if (isEmailValid  && isPasswordValid) {
                     String u, phone, r, p, d;
-                    u = uname.getText().toString().trim();
-                    p = pass.getText().toString().trim();
+                    u = uname.getText().toString();
+                    p = pass.getText().toString();
 
                     ///user USER = new user(uname.getText().toString(), pass.getText().toString());
                     auth.signInWithEmailAndPassword(
