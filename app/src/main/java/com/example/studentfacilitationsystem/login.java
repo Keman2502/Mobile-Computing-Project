@@ -35,10 +35,15 @@ public class login extends AppCompatActivity {
         pass=findViewById(R.id.pwd);
         auth = FirebaseAuth.getInstance();
 
+
+
+
+
+
         b.setOnClickListener(new View.OnClickListener() {
 
-
-            public void onClick(View v) {
+            @Override
+            public void onClick(View view) {
                 if (uname.getText().toString().isEmpty()) {
                     uname.setError("Field is required");
                     isEmailValid = false;
@@ -74,13 +79,13 @@ public class login extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                Intent intent = new Intent(login.this, portalnew.class);
+                                Intent intent = new Intent(login.this, portal.class);
                                 startActivity(intent);
 
                             }else {
                                 // If sign in fails, display a message to the user.
                                 Log.w("TAG", "createUserWithEmail:failure", task.getException());
-                                Intent intent = new Intent(login.this, portalnew.class);
+                                Intent intent = new Intent(login.this, signup.class);
                                 startActivity(intent);
 
                             }

@@ -32,7 +32,7 @@ public class portal extends AppCompatActivity {
 
         });
 //
-        Button upd_acc =  findViewById(R.id.signup);
+        Button upd_acc =  findViewById(R.id.uacc);
         upd_acc.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(portal.this, update_account.class));
@@ -41,7 +41,7 @@ public class portal extends AppCompatActivity {
 
         });
 //
-        Button drop_acc =  findViewById(R.id.delete);
+        Button drop_acc =  findViewById(R.id.dacc);
         drop_acc.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(portal.this, delete_account.class));
@@ -50,7 +50,7 @@ public class portal extends AppCompatActivity {
 
         });
 //
-        Button ann =  findViewById(R.id.signup);
+        Button ann =  findViewById(R.id.ann);
         ann.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 startActivity(new Intent(portal.this, announcements.class));
@@ -59,9 +59,10 @@ public class portal extends AppCompatActivity {
 
         });
 //
-        Button q =  findViewById(R.id.login);
+        Button q =  findViewById(R.id.quiz);
         q.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+
                 startActivity(new Intent(portal.this, quiz.class));
             }
 
