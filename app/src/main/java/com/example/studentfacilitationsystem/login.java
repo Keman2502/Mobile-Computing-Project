@@ -39,7 +39,7 @@ public class login extends AppCompatActivity {
 
 
             public void onClick(View v) {
-                if (uname.getText().toString().matches("")) {
+                if (uname.getText().toString().isEmpty()) {
                     uname.setError("Field is required");
                     isEmailValid = false;
                 } else if (!Patterns.EMAIL_ADDRESS.matcher(uname.getText().toString()).matches()) {
@@ -50,7 +50,7 @@ public class login extends AppCompatActivity {
                 }
 
                 // Check for a valid password.
-                if (pass.getText().toString().matches("")) {
+                if (pass.getText().toString().isEmpty()) {
                     pass.setError("Field is required");
                     isPasswordValid = false;
                 } else if (pass.getText().length() < 6) {
@@ -74,13 +74,13 @@ public class login extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
-                                Intent intent = new Intent(login.this, portal.class);
+                                Intent intent = new Intent(login.this, portalnew.class);
                                 startActivity(intent);
 
                             }else {
                                 // If sign in fails, display a message to the user.
                                 Log.w("TAG", "createUserWithEmail:failure", task.getException());
-                                Intent intent = new Intent(login.this, signup.class);
+                                Intent intent = new Intent(login.this, portalnew.class);
                                 startActivity(intent);
 
                             }
