@@ -9,6 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.StudentFacilitationSystem">
+        <activity android:name=".quiz"></activity>
+        <activity android:name=".announcements" />
+        <activity android:name=".delete_account" />
+        <activity android:name=".drop_course" />
+        <activity android:name=".update_account" />
+        <activity android:name=".add_course" />
+        <activity android:name=".portal" />
+        <activity android:name=".signup" />
+        <activity android:name=".login" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

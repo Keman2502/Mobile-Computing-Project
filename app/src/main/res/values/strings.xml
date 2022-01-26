@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">StudentFacilitationSystem</string>
+
+    <string name="student_facilitation_system">Student Facilitation System</string>
+    <string name="log_in">LOG IN</string>
+    <string name="sign_up">SIGN UP</string>
 </resources>

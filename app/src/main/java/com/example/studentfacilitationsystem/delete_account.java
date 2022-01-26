@@ -56,6 +56,7 @@ public class delete_account extends AppCompatActivity {
                 }
 
                 try{
+                    //String id = task.getResult().getUser().getUid();
                     DatabaseReference reference = FirebaseDatabase.getInstance().getReference("user").child("userId");
                     reference.removeValue();
                     Toast.makeText(getApplicationContext(), "Successfully account deleted!", Toast.LENGTH_LONG).show();

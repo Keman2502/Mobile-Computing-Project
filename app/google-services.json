@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "591264439454",
+    "project_id": "studentfacilitationsystem",
+    "storage_bucket": "studentfacilitationsystem.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:591264439454:android:71acbd93c39645e9b92f8f",
+        "android_client_info": {
+          "package_name": "com.example.studentfacilitationsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "591264439454-7n7sb08a5qgd9c4rutrf27tu3u73497l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-mj9lHorIr52nCZZcBpf4uByuHRUd_x8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "591264439454-7n7sb08a5qgd9c4rutrf27tu3u73497l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
