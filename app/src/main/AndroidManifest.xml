@@ -9,7 +9,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.StudentFacilitationSystem">
-        <activity android:name=".portalnew" />
         <activity android:name=".quiz" />
         <activity android:name=".announcements" />
         <activity android:name=".delete_account" />

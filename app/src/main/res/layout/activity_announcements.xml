@@ -59,6 +59,7 @@
         android:layout_height="94dp"
         android:layout_above="@+id/ok"
         android:layout_alignParentEnd="true"
+        android:text="Quiz is going to held on Tuesday. Do come properly prepared. No retake will be taken."
         android:layout_marginBottom="262dp"
         android:layout_marginEnd="30dp" />
 
@@ -69,7 +70,8 @@
         android:layout_above="@+id/ok"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="134dp"
-        android:layout_marginEnd="35dp" />
+        android:layout_marginEnd="35dp"
+        android:text="Recruitment drive for Arbisoft is on Friday and the one day recruitment drive for Devsinc is on Saturday."/>
 
 
 </RelativeLayout>
