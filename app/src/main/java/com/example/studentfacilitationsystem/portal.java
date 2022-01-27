@@ -35,6 +35,8 @@ public class portal extends AppCompatActivity {
         Button upd_acc =  findViewById(R.id.uacc);
         upd_acc.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+
+
                 startActivity(new Intent(portal.this, update_account.class));
             }
 

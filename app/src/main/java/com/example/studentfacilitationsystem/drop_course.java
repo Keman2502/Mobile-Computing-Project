@@ -5,13 +5,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 public class drop_course extends AppCompatActivity {
 
@@ -19,51 +24,57 @@ public class drop_course extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drop_course);
+        EditText cname;
 
-        EditText cname,roll,tname,dpt;
         Button b = findViewById(R.id.drop);
         cname=findViewById(R.id.coursename);
-        roll=findViewById(R.id.rollid);
-        dpt=findViewById(R.id.dpt);
-        tname=findViewById(R.id.tchr);
-       // DatabaseReference reference;
 
         b.setOnClickListener(new View.OnClickListener() {
 
-
+            @Override
             public void onClick(View v) {
-                String name,rollid,d,tchr;
-                name=cname.getText().toString().trim();
-                rollid=roll.getText().toString().trim();
-                d=dpt.getText().toString().trim();
-                tchr=tname.getText().toString().trim();
+                String name;
 
-                course c =new course(name,rollid,tchr,d);
+                name=cname.getText().toString();
 
                 if(TextUtils.isEmpty(name)){
                     cname.setError("Field is required");
                 }
-                if(TextUtils.isEmpty(rollid)){
-                    roll.setError("Field is required");
-                }
-                if(TextUtils.isEmpty(d)){
-                    dpt.setError("Field is required");
-                }
-                if(TextUtils.isEmpty(tchr)){
-                    tname.setError("Field is required");
-                }
-
 
 
                 try{
-                    DatabaseReference reference = FirebaseDatabase.getInstance().getReference("course").child("courseId");
+
+
+                    DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+                    Query applesQuery = ref.child("course").orderByChild("name").equalTo(name);
+
+                    applesQuery.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot dataSnapshot) {
+                            for (DataSnapshot appleSnapshot: dataSnapshot.getChildren()) {
+                                appleSnapshot.getRef().removeValue();
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+                            Log.e("TAG", "onCancelled", databaseError.toException());
+                        }
+                    });
+
+
+
+
+                    //String id = task.getResult().getUser().getUid();
+                    DatabaseReference reference = FirebaseDatabase.getInstance().getReference("User").child("UserId");
                     reference.removeValue();
-                    Toast.makeText(getApplicationContext(), "Successfully dropped!", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(drop_course.this, portal.class));}
+                    Toast.makeText(getApplicationContext(), "Successfully Course deleted!", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(drop_course.this, MainActivity.class));
+                }
                 catch(Exception e){
                     e.printStackTrace();
                     Toast.makeText(getApplicationContext(), "UNSUCCESSFUL", Toast.LENGTH_LONG).show();
-                    //Toast.makeText(getApplicationContext(), "Successfully registered!", Toast.LENGTH_LONG).show();
+                    //Toast.makeText(getApplicationContext(), "Deletion Unsuccessful", Toast.LENGTH_LONG).show();
                     startActivity(new Intent(getApplicationContext(), portal.class));
                 }
 
@@ -72,7 +83,5 @@ public class drop_course extends AppCompatActivity {
 
 
         });
-
-
     }
 }

@@ -112,8 +112,8 @@ public class signup extends AppCompatActivity {
                                                     uname.getText().toString(),
                                                     pass.getText().toString(),
                                                     roll.getText().toString(),
-                                                    ph.getText().toString(),
-                                                    dpt.getText().toString()
+                                                    dpt.getText().toString(),
+                                                    ph.getText().toString()
                                             );
                                             String id = task.getResult().getUser().getUid();
                                             FirebaseDatabase db = FirebaseDatabase.getInstance();
